@@ -4,17 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataPark</title>
-    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./static/base.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"></div>
-            <div class="menu"></div>
-            <div class="outlink"></div>
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo2.png">
+                    <span>DataPark</span>
+                </a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Projects</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
+            </div>
+            <div class="outlink">
+                <a href="#">
+                    <img src="./images/outlink3.png">
+                </a>
+                <a href="#">
+                    <img src="./images/outlink2.png">
+                </a>
+            </div>
         </nav>
     </header>
-    <h1>소통하는 데이터 분석가 </h1>
-    <h2>바로 접니다.</h2>
+    <div class="header-margin"></div>
+
+
+
+
+    <section class="first">
+        <h1>안녕하세요</h1>    
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // 스크롤 이벤트 감지
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            
+            // 스크롤이 50px 이상일 때 색상 변경
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
