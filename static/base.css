@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Orbit&family=Song+Myung&display=swap');
 
-*{margin:0; padding:0;-ms-overflow-style: none;
+*{margin:0; padding:0;
+    -ms-overflow-style: none;
 
     /* font-family: "IBM Plex Sans KR", sans-serif; */
     /* font-family: "Nanum Gothic Coding", system-ui; */
@@ -31,7 +32,7 @@ header{
     box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
     position:fixed;
     background-color:darkslategray;
-    z-index: 1;
+    z-index: 9999;
 }
 
 header div{
@@ -86,53 +87,86 @@ header div img{
     margin-top:1.5vh;
 }
 
+
+
+
 #home{
     width:100%;
-    height:60vh;
+    height:85vh;
     background-image: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.1)), url("../images/background1.webp");
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.6)), url("../images/background6.webp");
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.typing {
+    font-weight: bold;
+    color:whitesmoke;
+    font-size: 4.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 7px solid;
+    width: 0;
+    animation: typing 2.5s steps(24) forwards, blink 0.75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width:64%; }
+}
+
+@keyframes blink {
+    0% { border-right-color: whitesmoke; }
+    50% { border-right-color: transparent; }
+    100% { border-right-color: whitesmoke; }
+}
+.blinking {
+    animation: blink 0.75s step-end infinite;
+}
+
+#border-line{
+    width:80%;
+    height: 0.3vh;
+    margin: 0 auto 5vh auto;
+    border-bottom: 1px solid darkgray;
+}
+
+
+
+
+#about{
+    width:60%;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#about h1{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#about div.skills{
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0 5vh 0;
+}
+#about div.skills div.skills-container{
+    width:4vw;
+    height: 4vw;
+    margin:0 2.5vw 0 2.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-#home h1{
-    color:whitesmoke;
-    font-size: 4rem;
-    padding:10px;
-    opacity: 0;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
-}
-.animated-text {
-    animation: wipeIn 2s ease forwards; 
-}
-
-#about{
-    width:70%;
-    height:100vh;
-    background-color: aliceblue;
-    margin:0 auto;
-    display: flex;
-}
-#projects{
-    width:70%;
-    height:100vh;
-    background-color: paleturquoise;
-    margin:0 auto;
-    display: flex;
-}
-
-
-@keyframes wipeIn {
-    0% {
-        opacity: 0;
-        clip-path: inset(0 100% 0 0); /* 오른쪽 끝부터 숨겨져 있음 */
-    }
-    100% {
-        opacity: 1;
-        clip-path: inset(0 0 0 0); /* 전체가 보이도록 */
-    }
+#about div.skills div.skills-container img{
+    width:100%;
+    height:100%;
 }

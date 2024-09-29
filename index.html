@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataPark</title>
     <link rel="stylesheet" href="./static/base.css">
+    <link rel="icon" href="./images/logo2.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,1,0" />
 </head>
 <body>
     <header>
@@ -20,12 +22,34 @@
         <div><a href="#"><img src="./images/outlink7.png"></a></div>
     </header>
     <section id="home">
-        <h1 class="animated-text">효율적인 분석을 위한</h1>
-        <h1 class="animated-text">데이터 멀티태스커</h1>
+        <div class="typing" id="typing-text">데이터 멀티 태스커 포트폴리오</div>
     </section>
+
+    <div id="border-line"></div>
+    
+
     <section id="about">
-        <span>hi</span>
+        <h1> DRI Mind-set Data Analyst</h1>
+        <h1>데이터 흐름을 파악하고 프로세스를 점검하고 목적을 파악합니다</h1>
+        <h1>반복적인 업무는 자동화하고, 프로세스를 보다 효율적으로 개선하는 것에 강점이 있습니다.</h1>
+        <h1>다양한 분야의 프로젝트 경험을 바탕으로 유연하고 빠른 적응력을 갖췄습니다.</h1>
+        <h1><br><br>SKILLS</h1>
+        <div class="skills">
+            <div class="skills-container">
+                <img src="./images/python.png">
+            </div>
+            <div class="skills-container"><img src="./images/R.png"></div>
+            <div class="skills-container"><img src="./images/django.png"></div>
+            <div class="skills-container"><img src="./images/oracle.png"></div>
+            <div class="skills-container"><img src="./images/mysql.png"></div>
+            <div class="skills-container"><img src="./images/xd.png"></div>
+        </div>
+
     </section>
+
+    <div id="border-line"></div>
+
+
     <section id="projects">
         <h1>hi</h1>
     </section>
@@ -36,6 +60,16 @@
 
 <script>
     // 모든 a 태그에 대해 클릭 이벤트 추가
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        
+        // 스크롤이 50px 이상일 때 색상 변경
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -51,25 +85,16 @@
                 behavior: 'smooth'
             });
 
-            // 애니메이션을 다시 트리거하기 위해 기존 애니메이션을 초기화
-            const animatedTexts = targetSection.querySelectorAll('.animated-text');
-            animatedTexts.forEach(text => {
-                text.style.animation = 'none'; // 애니메이션 초기화
-                setTimeout(() => {
-                    text.style.animation = ''; // 애니메이션 재적용
-                }, 10); // 타이머로 잠시 후 재적용
-            });
+            const typingText = document.getElementById('typing-text');
+        
+            // 애니메이션을 초기화하기 위해 클래스 제거 후 다시 추가
+            typingText.classList.remove('typing');
+            
+            // 브라우저가 클래스를 제거하는 것을 인식할 수 있도록 약간의 딜레이 설정
+            setTimeout(function() {
+                typingText.classList.add('typing');
+            }, 10); 
         });
-    });
-
-    // 스크롤 시 헤더 스타일 변경
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.scrollY > 10) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
     });
 </script>
 
