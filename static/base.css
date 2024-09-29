@@ -1,103 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
-*{margin:0; padding:0;}
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Orbit&family=Song+Myung&display=swap');
+
+*{margin:0; padding:0;-ms-overflow-style: none;
+
+    /* font-family: "IBM Plex Sans KR", sans-serif; */
+    /* font-family: "Nanum Gothic Coding", system-ui; */
+    /* font-family: "Noto Serif KR", system-ui; */
+    /* font-family: "Noto Serif KR", serif; */
+    /* font-family: "Nanum Gothic", system-ui; */
+    /* font-family: "Gowun Batang", system-ui; */
+    /* font-family: "Nanum Gothic Coding", monospace; */
+    /* font-family: "Nanum Myeongjo", serif; */
+    /* font-family: "Gowun Dodum", system-ui; */
+    /* font-family: "Song Myung", system-ui; */
+    /* font-family: "Orbit", system-ui; */
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
 
 header{
-    font-family: 'Gowun Batang', serif;
-    width:100vw;
-    height:8vh;
-    background-color: rgb(41, 41, 41);
+    width:100vw; 
+    height:10vh; 
+    display: flex;
     overflow: hidden;
-    position:fixed;
-    transition: background-color 0.5s ease; 
-}
-header nav a{
-    text-decoration: none;
-    color: white;
-}
-header nav a:visited{
-    text-decoration: none;
-    color:white;
-}
-header nav{
-    width:80vw;
-    height:8vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10vw;
-}
-
-header nav .logo{
-    width:10vw;
-    height:8vh;
-}
-header nav .logo img{
-    height:5vh;
-    margin-top:1.5vh;
-    float:left;
-    align-items: center;
-}
-
-header nav .logo span {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color:white;
-    margin-left:1vw;
-}
-
-header nav .menu{
-    width:30vw;
-    height:8vh;
-    display: flex;
-    justify-content: center;
-}
-header nav .menu ul{
-    width:80%;
-    display: flex;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    color:white;
-    font-size: 1.5rem;
-    list-style:none;
-}
-
-
-header nav .outlink{
-    width:10vw;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-header nav .outlink a{
-    text-decoration: none;
-}
-header nav .outlink img{
-    width:5vh;
-}
-.header-margin{
-    width:100vw;
-    height:8vh;
+    transition: background-color 0.7s ease;
+    color:black;
 }
 .scrolled{
-    background-color: black;
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
+    position:fixed;
+    background-color:darkslategray;
+    z-index: 1;
 }
 
+header div{
+    width:10%;
+    height: 100%;
+}
 
+header nav{
+    width:40%;
+    height:100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+}
 
+header nav ul{
+    display: flex;
+    list-style:none;
+    align-items: center;
+}
 
+header nav ul li{
+    letter-spacing: 0.2rem;
+    margin-left:1.5vw;
+    margin-right:1.5vw;
+}
 
+header nav ul li a{
+    color:black;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+header nav ul li a:hover{
+    color:orange;
+    font-weight: bold;
+    text-decoration: none;
+}
+header nav ul li a:visited{
+    text-decoration: none;
+}
+header.scrolled nav ul li a{
+    color:white;
+}
+header.scrolled nav ul li a:hover{
+    color:orange;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-section{
-    width:70%;
+header div img{
+    height:7vh;
+    margin-top:1.5vh;
+}
+
+#home{
+    width:100%;
+    height:60vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.1)), url("../images/background1.webp");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin : 0 auto;
+    flex-direction: column;
+}
+#home h1{
+    color:whitesmoke;
+    font-size: 4rem;
+    padding:10px;
+    opacity: 0;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+}
+.animated-text {
+    animation: wipeIn 2s ease forwards; 
+}
+
+#about{
+    width:70%;
+    height:100vh;
+    background-color: aliceblue;
+    margin:0 auto;
+    display: flex;
+}
+#projects{
+    width:70%;
+    height:100vh;
+    background-color: paleturquoise;
+    margin:0 auto;
+    display: flex;
+}
+
+
+@keyframes wipeIn {
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0); /* 오른쪽 끝부터 숨겨져 있음 */
+    }
+    100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0); /* 전체가 보이도록 */
+    }
 }
