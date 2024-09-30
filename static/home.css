@@ -1,0 +1,86 @@
+header{
+    width:100vw;
+    height:8vh;
+    background-color: whitesmoke;
+    position: fixed;
+    top:0;
+    box-shadow: 0px 2px 10px 0px darkgray;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    transition: background-color 1s ease;
+}
+
+header.scrolled{
+    background-color: darkslategrey;
+}
+header.scrolled a{
+    color:white;
+}
+
+header div.header-box{
+    width:10%;
+    height:100%;
+}
+header div.header-box img{
+    height:80%;
+    margin-top:5%;
+    float:right;
+}
+
+header nav{
+    width:40%;
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+}
+header nav ul{
+    width:100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav ul li a{
+    color:black;
+    letter-spacing:0.2rem;
+    transition: color 0.5s ease;
+}
+
+header a:hover{
+    color:orange;
+    font-weight: bold;
+}
+
+
+#home{
+    width:99vw;
+    height:90vh;
+    margin:0 auto;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.6)),
+        url("../images/background1.webp");
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home span{
+    font-size: 5rem;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 1rem;
+    border-right: 0.5rem solid white;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+
+@keyframes blink {
+    50%{border-right-color: transparent;}
+}

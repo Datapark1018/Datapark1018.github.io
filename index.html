@@ -1,101 +1,121 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataPark</title>
+    <title>데이터 Park</title>
     <link rel="stylesheet" href="./static/base.css">
-    <link rel="icon" href="./images/logo2.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,1,0" />
+    <link rel="stylesheet" href="./static/home.css">
+    <link rel="stylesheet" href="./static/about.css">
+    <link rel="stylesheet" href="./static/projects.css">
+    <link rel="icon" href="./images/python.png">
 </head>
 <body>
     <header>
-        <div></div>
+        <div id="tophead" class="header-box"></div>
         <nav>
             <ul>
-                <li><a href="#home">HOME</a></li>
+                <li><a href="#home" id="startTyping">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
-        <div><a href="#"><img src="./images/outlink7.png"></a></div>
+        <div class="header-box">
+            <a href="#"><img src="./images/outlink7.png"></a>
+        <div class="header-box">
     </header>
+
+ 
     <section id="home">
-        <div class="typing" id="typing-text">데이터 멀티 태스커 포트폴리오</div>
+        <span id="typingEffect"></span>
     </section>
 
-    <div id="border-line"></div>
+
+    <div id="section-line"></div>
+
     
-
     <section id="about">
-        <h1> DRI Mind-set Data Analyst</h1>
-        <h1>데이터 흐름을 파악하고 프로세스를 점검하고 목적을 파악합니다</h1>
-        <h1>반복적인 업무는 자동화하고, 프로세스를 보다 효율적으로 개선하는 것에 강점이 있습니다.</h1>
-        <h1>다양한 분야의 프로젝트 경험을 바탕으로 유연하고 빠른 적응력을 갖췄습니다.</h1>
-        <h1><br><br>SKILLS</h1>
-        <div class="skills">
-            <div class="skills-container">
-                <img src="./images/python.png">
-            </div>
-            <div class="skills-container"><img src="./images/R.png"></div>
-            <div class="skills-container"><img src="./images/django.png"></div>
-            <div class="skills-container"><img src="./images/oracle.png"></div>
-            <div class="skills-container"><img src="./images/mysql.png"></div>
-            <div class="skills-container"><img src="./images/xd.png"></div>
+        <div class="image-container">
+            <img src="./images/me.png">
         </div>
-
+        <div id="markdown-about"></div>
     </section>
 
-    <div id="border-line"></div>
+
+    <div id="section-line"></div>
+
 
 
     <section id="projects">
-        <h1>hi</h1>
+        <div class="project-container">
+            <div id="markdown-content-1"></div>
+            <div id="outlink">
+                <a href="#projects"><img src="./images/colab.png"></a>
+                <a href="#projects"><img src="./images/pdf.png"></a>
+            </div>
+        </div>
+        <div class="project-container">
+            <div id="markdown-content-2"></div>
+            <div id="outlink">
+                <a href="#projects"><img src="./images/colab.png"></a>
+                <a href="#projects"><img src="./images/pdf.png"></a>
+            </div>
+        </div>
+        <div class="project-container">
+            <div id="markdown-content-3"></div>
+            <div id="outlink">
+                <a href="#projects"><img src="./images/colab.png"></a>
+                <a href="#projects"><img src="./images/pdf.png"></a>
+            </div>
+        </div>
+        <div class="project-container">
+            <div id="markdown-content-4"></div>
+            <div id="outlink">
+                <a href="#projects"><img src="./images/colab.png"></a>
+                <a href="#projects"><img src="./images/pdf.png"></a>
+            </div>
+        </div>
     </section>
+
+
+    <div id="section-line"></div>
+
+
     <section id="contact">
-        <h1>hi</h1>
+        4
     </section>
-</body>
 
-<script>
-    // 모든 a 태그에 대해 클릭 이벤트 추가
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        
-        // 스크롤이 50px 이상일 때 색상 변경
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+
+    <script src="./static/base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <script>
+        // 각 id와 마크다운 파일 경로를 연결하는 배열
+        const markdownFiles = [
+            { id: 'markdown-about', file: './templates/about.md' },
+            { id: 'markdown-content-1', file: './templates/project1.md' },
+            { id: 'markdown-content-2', file: './templates/project2.md' },
+            { id: 'markdown-content-3', file: './templates/project3.md' },
+            { id: 'markdown-content-4', file: './templates/project4.md' }
+        ];
+    
+        // 각 id에 해당하는 마크다운 파일을 로드하는 함수
+        function loadMarkdown(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById(id).innerHTML = marked.parse(text);
+                })
+                .catch(error => {
+                    console.error(`Error loading ${file}:`, error);
+                });
         }
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetSection = document.querySelector(this.getAttribute('href'));
-            const headerOffset = window.innerHeight * 0.1; // 10vh에 해당하는 오프셋
-            const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerOffset;
-
-            // 부드럽게 스크롤 이동
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-
-            const typingText = document.getElementById('typing-text');
-        
-            // 애니메이션을 초기화하기 위해 클래스 제거 후 다시 추가
-            typingText.classList.remove('typing');
-            
-            // 브라우저가 클래스를 제거하는 것을 인식할 수 있도록 약간의 딜레이 설정
-            setTimeout(function() {
-                typingText.classList.add('typing');
-            }, 10); 
+    
+        // 모든 마크다운 파일을 로드
+        markdownFiles.forEach(item => {
+            loadMarkdown(item.id, item.file);
         });
-    });
-</script>
-
+    </script>
+</body>
 </html>
