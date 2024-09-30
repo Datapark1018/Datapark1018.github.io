@@ -1,0 +1,11 @@
+#contact{
+    text-align: center;
+    background-color: darkslategrey;
+    color:white;
+    padding:10vh;
+}
+
+#contact p{
+    font-size: 2rem;
+    padding:30px;
+}

@@ -19,6 +19,11 @@ window.onload = function() {
 
 
 
+
+
+
+
+
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
         if (window.scrollY > 50) {
@@ -33,7 +38,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
 
         const targetSection = document.querySelector(this.getAttribute('href'));
-        const headerOffset = window.innerHeight * 0.2; // 10vh에 해당하는 오프셋
+        const headerOffset = window.innerHeight * 0.08; // 10vh에 해당하는 오프셋
         const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY; // 스크롤 위치와 섹션 위치 계산
         const offsetPosition = elementPosition - headerOffset;
 
@@ -56,3 +61,38 @@ function resetTypingEffect() {
 document.getElementById("startTyping").onclick = function(event) {
     resetTypingEffect(); // 타이핑 효과 초기화 및 다시 실행
 };
+
+
+
+
+
+
+
+
+
+
+// 각 id와 마크다운 파일 경로를 연결하는 배열
+const markdownFiles = [
+    { id: 'markdown-about', file: './static/md/about.md' },
+    { id: 'markdown-content-1', file: './static/md/project1.md' },
+    { id: 'markdown-content-2', file: './static/md/project2.md' },
+    { id: 'markdown-content-3', file: './static/md/project3.md' },
+    { id: 'markdown-content-4', file: './static/md/project4.md' }
+];
+
+// 각 id에 해당하는 마크다운 파일을 로드하는 함수
+function loadMarkdown(id, file) {
+    fetch(file)
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById(id).innerHTML = marked.parse(text);
+        })
+        .catch(error => {
+            console.error(`Error loading ${file}:`, error);
+        });
+}
+
+// 모든 마크다운 파일을 로드
+markdownFiles.forEach(item => {
+    loadMarkdown(item.id, item.file);
+});

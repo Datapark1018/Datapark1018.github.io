@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데이터 Park</title>
-    <link rel="stylesheet" href="./static/base.css">
-    <link rel="stylesheet" href="./static/home.css">
-    <link rel="stylesheet" href="./static/about.css">
-    <link rel="stylesheet" href="./static/projects.css">
-    <link rel="icon" href="./images/python.png">
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/home.css">
+    <link rel="stylesheet" href="./static/css/about.css">
+    <link rel="stylesheet" href="./static/css/projects.css">
+    <link rel="stylesheet" href="./static/css/contact.css">
+    <link rel="icon" href="./static/images/python.png">
 </head>
 <body>
     <header>
@@ -16,13 +17,13 @@
         <nav>
             <ul>
                 <li><a href="#home" id="startTyping">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#a-about">ABOUT</a></li>
+                <li><a href="#a-projects">PROJECTS</a></li>
+                <li><a href="#a-contact">CONTACT</a></li>
             </ul>
         </nav>
         <div class="header-box">
-            <a href="#"><img src="./images/outlink7.png"></a>
+            <a href="#"><img src="./static/images/outlink7.png"></a>
         <div class="header-box">
     </header>
 
@@ -34,16 +35,18 @@
 
     <div id="section-line"></div>
 
-    
+    <div id="a-about" class="section-text"><p>🏷️ About Me</p></div>
+
     <section id="about">
         <div class="image-container">
-            <img src="./images/me.png">
+            <img src="./static/images/me.png">
         </div>
         <div id="markdown-about"></div>
     </section>
 
 
     <div id="section-line"></div>
+    <div id="a-projects" class="section-text"><p>🏷️ Projects</p></div>
 
 
 
@@ -51,71 +54,45 @@
         <div class="project-container">
             <div id="markdown-content-1"></div>
             <div id="outlink">
-                <a href="#projects"><img src="./images/colab.png"></a>
-                <a href="#projects"><img src="./images/pdf.png"></a>
+                <a href="#projects"><img src="./static/images/colab.png"></a>
+                <a href="#projects"><img src="./static/images/pdf.png"></a>
             </div>
         </div>
         <div class="project-container">
             <div id="markdown-content-2"></div>
             <div id="outlink">
-                <a href="#projects"><img src="./images/colab.png"></a>
-                <a href="#projects"><img src="./images/pdf.png"></a>
+                <a href="#projects"><img src="./static/images/colab.png"></a>
+                <a href="#projects"><img src="./static/images/pdf.png"></a>
             </div>
         </div>
         <div class="project-container">
             <div id="markdown-content-3"></div>
             <div id="outlink">
-                <a href="#projects"><img src="./images/colab.png"></a>
-                <a href="#projects"><img src="./images/pdf.png"></a>
+                <a href="#projects"><img src="./static/images/colab.png"></a>
+                <a href="#projects"><img src="./static/images/pdf.png"></a>
             </div>
         </div>
         <div class="project-container">
             <div id="markdown-content-4"></div>
             <div id="outlink">
-                <a href="#projects"><img src="./images/colab.png"></a>
-                <a href="#projects"><img src="./images/pdf.png"></a>
+                <a href="#projects"><img src="./static/images/colab.png"></a>
+                <a href="#projects"><img src="./static/images/pdf.png"></a>
             </div>
         </div>
     </section>
 
 
     <div id="section-line"></div>
+    <div id="a-contact" class="section-text"><p>🏷️ Contact</p></div>
 
 
     <section id="contact">
-        4
+        <img src="./static/images/me2.png">
+        <p>📞 연락처 : 010-3236-6724</p>
     </section>
 
 
-    <script src="./static/base.js"></script>
+    <script src="./static/js/base.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-    <script>
-        // 각 id와 마크다운 파일 경로를 연결하는 배열
-        const markdownFiles = [
-            { id: 'markdown-about', file: './templates/about.md' },
-            { id: 'markdown-content-1', file: './templates/project1.md' },
-            { id: 'markdown-content-2', file: './templates/project2.md' },
-            { id: 'markdown-content-3', file: './templates/project3.md' },
-            { id: 'markdown-content-4', file: './templates/project4.md' }
-        ];
-    
-        // 각 id에 해당하는 마크다운 파일을 로드하는 함수
-        function loadMarkdown(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(text => {
-                    document.getElementById(id).innerHTML = marked.parse(text);
-                })
-                .catch(error => {
-                    console.error(`Error loading ${file}:`, error);
-                });
-        }
-    
-        // 모든 마크다운 파일을 로드
-        markdownFiles.forEach(item => {
-            loadMarkdown(item.id, item.file);
-        });
-    </script>
 </body>
 </html>

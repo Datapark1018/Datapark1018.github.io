@@ -37,11 +37,15 @@ a:visited{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin :10vh auto 10vh auto;
+    margin :10vh auto 2vh auto;
 }
 
-
-#contact{
-    width:100%;
-    height:100vh;
+.section-text{
+    font-size: 4rem;
+    font-weight: bold;
+    width:30%;
+    text-align: right;
+    color:darkslategrey;
+    text-shadow: 0px 0px 5px rgba(109, 109, 109, 0.9);
+    margin: 0 0 5vh 0;
 }
