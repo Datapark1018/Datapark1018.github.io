@@ -1,4 +1,4 @@
-# <p style="color:midnightblue;"> 🍿 맞춤형 영화 추천 웹 사이트
+# <p style="color:midnightblue;background-color:wheat;"> 🍿 맞춤형 영화 추천 웹 사이트
 
 ### <p style="line-height:3; color:slategrey;"> ***Summary***</p> 
 

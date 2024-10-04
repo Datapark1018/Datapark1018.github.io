@@ -1,4 +1,4 @@
-# <p style="color:midnightblue;"> 🌤️ 지표면 온도 예측 프로젝트
+# <p style="color:midnightblue;background-color:wheat;"> 🌤️ 지표면 온도 예측 모델링
 
 ### <p style="line-height:3; color:slategrey;">***Summary***</p> 
 

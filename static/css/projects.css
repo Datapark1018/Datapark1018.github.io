@@ -1,11 +1,13 @@
 #projects {
-    width: 70%;
+    width: 100%;
     margin:0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(6, 6, 6, 0.5)), url("../images/background6.webp");
+    background-size: cover;
     /* background-color: darkslategray;
     padding: 10vh 14.5vw 10vh 14.5vw; */
 }
@@ -23,15 +25,31 @@
     overflow: hidden;
 }
 
-#projects div.project-container #outlink{
+
+#projects table{
     width:60%;
-    margin: 1vh auto;
+    border-spacing: 3vw;
+}
+#projects table td{
+    text-align: left;
+    vertical-align: top;
+    /* border: 2px solid gray; */
+    border-radius: 3%;
+    padding:2vw;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 1px wheat;
+
+}
+
+
+#outlink{
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
 }
 
-#projects div.project-container #outlink img{
-    height:6vh;
+#outlink img{
+    height:5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -39,7 +57,6 @@
     border-radius: 20%;
 }
 
-#projects div.project-container #outlink img:hover{
-    height:6.5vh;
+#outlink img:hover{
     background-color: rgba(0,0,0,0.05);
 }
