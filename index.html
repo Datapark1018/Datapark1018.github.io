@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="./static/css/projects.css">
     <link rel="stylesheet" href="./static/css/contact.css">
     <link rel="icon" href="./static/images/python.png">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 </head>
 <body>
     <header>
-        <div id="tophead" class="header-box"></div>
+        <div id="tophead" class="header-box">
+            <p>Bak Sung Ho</p>
+        </div>
         <nav>
             <ul>
                 <li><a href="#home" id="startTyping">HOME</a></li>
@@ -23,13 +27,15 @@
             </ul>
         </nav>
         <div class="header-box">
-            <a href="#"><img src="./static/images/outlink7.png"></a>
+            <a href="https://github.com/Datapark1018" target="_blank"><img src="./static/images/github.png"></a>
         <div class="header-box">
-    </header>
+    </header>x
 
  
     <section id="home">
-        <span id="typingEffect"></span>
+        <div id="typingContainer">
+            <span id="typingEffect"></span><span id="blinkEffect">&nbsp;</span>
+        </div>
     </section>
 
 
@@ -42,6 +48,26 @@
             <img src="./static/images/me.png">
         </div>
         <div id="markdown-about"></div>
+        <br>
+        <span class="span-career">Career</span>
+        <hr>
+
+        <table id="careers-container">
+            <tr>
+                <td>
+                    <div id="career-1"></div>
+                    <div id="career-detail">
+                        <button id="openMd" class='readme' data-src="career1_detail.md">📁README</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="career-2"></div>
+                    <div id="career-detail">
+                        <button id="openMd" class='readme' data-src="career2_detail.md">📁README</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </section>
 
 
@@ -55,17 +81,40 @@
             <tr>
                 <td>
                     <div id="markdown-content-1"></div>
-                    <div id="outlink">
-                        <a href="#projects"><img src="./static/images/colab.png"></a>
-                        <a href="#projects"><img src="./static/images/pdf.png"></a>
+                    <div id="project-detail">
+                        <p><i>More Details</i></p>
+                        <!-- <a id="openMd" class='readme' data-src="career1_detail.md">📁README</a> -->
+                        <a href="https://colab.research.google.com/drive/1VbZTtGoId7SXJ-Cw_HX_WpzACIF12Pb6" class='colab' target="_blank">💻COLAB</a>
                     </div>
                 </td>
-                <td><div id="markdown-content-2"></div></td>
+                <td>
+                    <div id="markdown-content-2"></div>
+                    <div id="project-detail">
+                        <p><i>More Details</i></p>
+                        <!-- <a id="openMd" class='readme' data-src="career1_detail.md">📁README</a> -->
+                        <a href="https://colab.research.google.com/drive/1rYxCwQYHN17wYrahwT_H5UQ9xz0YHrM0" class='colab' target="_blank">💻COLAB</a>
+                    </div>
+                </td>
+                <td>
+                    <div id="markdown-content-3"></div>
+                    <div id="project-detail">
+                        <p><i>More Details</i></p>
+                        <!-- <a id="openMd" class='readme' data-src="career1_detail.md">📁README</a> -->
+                        <a id="openPdf" class='pdf' data-src="Project3.pdf">📑PDF</a>
+                    </div>
+                </td>
             </tr>
-            <tr>
-                <td><div id="markdown-content-3"></div></td>
-                <td><div id="markdown-content-4"></div></td>
-            </tr>
+            <!-- <tr>
+                <td>
+                    <div id="markdown-content-4"></div>
+                </td>
+                <td>
+                    <div id="markdown-content-5"></div>
+                </td>
+                <td>
+                    <div id="markdown-content-6"></div>
+                </td>
+            </tr> -->
         </table>
     </section>
 
@@ -76,11 +125,31 @@
 
     <section id="contact">
         <img src="./static/images/me2.png">
-        <p>📞 연락처 : 010-3236-6724</p>
+        <div id = "informs">
+            <p>📞 연락처</p>
+            <p>010-3236-6724</p>
+        </div>
+        <div id="informs">
+            <p>📩 이메일</p>
+            <p>datapark1018@gmail.com</p>
+        </div>
     </section>
 
 
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <embed id="pdfViewer" src="" type="application/pdf">
+        </div>
+    </div>
+    
+    <div id="markdownModal" class="modal">
+        <div class="modal-content-md">
+            <span class="close">&times;</span>
+            <div id="markdownContent"></div>
+        </div>
+    </div>
+
     <script src="./static/js/base.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>

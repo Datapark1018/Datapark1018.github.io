@@ -27,7 +27,7 @@
 
 
 #projects table{
-    width:60%;
+    width:80%;
     border-spacing: 3vw;
 }
 #projects table td{
@@ -35,28 +35,51 @@
     vertical-align: top;
     /* border: 2px solid gray; */
     border-radius: 3%;
-    padding:2vw;
+    padding:2vw 2vw 60px 2vw;
     background-color: whitesmoke;
     box-shadow: 0px 0px 10px 1px wheat;
+    position: relative;
 
 }
 
 
-#outlink{
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
+#project-detail{
+    width:80%;
+    position: absolute;
+    bottom:25px;
+}
+#project-detail p{
+    font-size:0.9rem;font-weight:300; color:rgba(0,0,0,0.7);
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
 }
 
-#outlink img{
-    height:5vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: height 0.1s ease;
-    border-radius: 20%;
+
+#project-detail a{
+    color:white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size:0.7rem;
+    padding:5px 10px;
+    border-radius:5px 5px 5px 5px;
+    margin-right:10px;
 }
 
-#outlink img:hover{
-    background-color: rgba(0,0,0,0.05);
+#project-detail a.readme{
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.2s background-color ease;
+}
+#project-detail a.colab{
+    background-color: rgba(255, 111, 0, 0.8);
+    transition: 0.2s background-color ease;
+}
+
+#project-detail a.pdf{
+    background-color: rgba(255, 0, 0, 0.8);
+    transition: 0.2s background-color ease;
+}
+
+#project-detail a:hover{
+    cursor: pointer;
+    background-color: rgba(94, 0, 115, 0.9);
 }

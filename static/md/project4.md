@@ -6,5 +6,4 @@
 <span style="font-size:1rem; line-height:2;">**🎤 기상청 주관 공모전 출품작**<br>여름철 일사, 겨울철 결로에 의한 피해</span>
 
 <br>
-
-### <p align="center" style="font-size:1rem;font-weight:300; color:rgba(0,0,0,0.7);">*- More Details -*</p>
+<br>

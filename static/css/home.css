@@ -9,13 +9,31 @@ header{
     justify-content:space-around;
     align-items: center;
     transition: background-color 1s ease;
+    z-index:1;
 }
 
 header.scrolled{
     background-color: darkslategrey;
 }
+
+header p{
+    color:rgb(0,0,0,0.8);
+    font-weight: bold;
+    font-size:0.7 rem;
+    font-family: "Nanum Myeongjo", serif;
+}
+header.scrolled p{
+    color:white;
+}
 header.scrolled a{
     color:white;
+}
+
+#tophead {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
 }
 
 header div.header-box{
@@ -64,9 +82,10 @@ header a:hover{
         rgba(0,0,0,0.5)),
         url("../images/background4.webp");
     background-size: cover;
-
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+    text-align: center;
+    vertical-align: middle;
     align-items: center;
 }
 
@@ -75,7 +94,11 @@ header a:hover{
     color:white;
     font-weight: bold;
     text-align: center;
-    padding-right: 1rem;
+}
+
+
+#blinkEffect{
+    font-size: 4rem;
     border-right: 0.5rem solid white;
     animation: blink 0.7s steps(1) infinite;
 }
