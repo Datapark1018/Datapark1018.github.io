@@ -1,10 +1,9 @@
 # <p style="color:midnightblue;background-color:wheat;"> ✈️ 관광 활성화 전략 분석
 
-### <p style="line-height:3; color:slategrey;"> ***Summary***</p> 
+### <p style="line-height:3; color:slategrey;">***Summary***</p> 
 
 * * *
-<span style="font-size:1rem; line-height:2;">**✅ 기상청 주관 공모전 출품작**<br>여름철 일사, 겨울철 결로에 의한 피해 방지를 위해 지표 온도 산출 프로젝트입니다. 기상제원 10개를 주요 피처로 하고 target인 '지표면 온도'를 예측하는 모델을 만들었습니다. 테스트 성능에서는 <u>95%의 정확도</u>를 기록했습니다.</span>
+<span style="font-size:1rem; line-height:2;">**✅ 행안부 주관 공모전 출품작**<br>인구소멸 위험지역 생활인구 증가를 위한 관광산업 활성화 전략 분석물입니다. 인구소멸 위기 지역중 관광 자원과 인프라 지수를 산출하여 산업 발전 가능성이 있는 것으로 판단되는 지역을 산출하고 각 지역별 특성을 분류하여 그에 맞는 전략을 분석했습니다. </span>
 
 <br>
 <br>
-

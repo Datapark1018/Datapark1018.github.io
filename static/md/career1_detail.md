@@ -28,7 +28,7 @@
         <br>
         <hr>
         <br>
-        <img src="https://file.notion.so/f/f/6f3166b5-9a0c-48a4-975e-b5abb652e5c8/2da38e20-0f55-42f5-b959-0db89b2455c5/image.png?table=block&id=1179353f-aebf-8075-876d-e8c5f9a07d91&spaceId=6f3166b5-9a0c-48a4-975e-b5abb652e5c8&expirationTimestamp=1728295200000&signature=SP39MhOm6n0UAWhYTo_kzDW8IHOOQsBladBUPE_ISsU&downloadName=image.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
+        <img src="./static/images/md/career1_1.png"width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
     </div>
 </div>
 
@@ -51,7 +51,7 @@
         <br>
         <hr>
         <br>
-        <img src="https://file.notion.so/f/f/6f3166b5-9a0c-48a4-975e-b5abb652e5c8/76727e1c-cd2f-42b3-8919-6569757520d5/image.png?table=block&id=1179353f-aebf-80a6-a8f2-db6a5bbec98c&spaceId=6f3166b5-9a0c-48a4-975e-b5abb652e5c8&expirationTimestamp=1728295200000&signature=vXi1ptBTxcEeM4UbMbFuGwHEMR8h3KxVclvJWWaOWG4&downloadName=image.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
+        <img src="./static/images/md/career1_2.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
     </div>
 </div>
 
@@ -72,7 +72,7 @@
         <br>
         <hr>
         <br>
-        <img src="https://file.notion.so/f/f/6f3166b5-9a0c-48a4-975e-b5abb652e5c8/fe8c84bc-bcdc-4082-9a58-e04900028907/image.png?table=block&id=1179353f-aebf-8044-9903-c885ada3dd8c&spaceId=6f3166b5-9a0c-48a4-975e-b5abb652e5c8&expirationTimestamp=1728295200000&signature=9nxIeBk-cuBeJ6JH6_sYFqiO6XE5xZrE_AxLYTknctQ&downloadName=image.png" width="45%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
-        <img src="https://file.notion.so/f/f/6f3166b5-9a0c-48a4-975e-b5abb652e5c8/13968b0c-cfd5-42cd-aee8-2816fdf597d1/image.png?table=block&id=1179353f-aebf-80f3-9187-ca11df02dfa9&spaceId=6f3166b5-9a0c-48a4-975e-b5abb652e5c8&expirationTimestamp=1728295200000&signature=kBOQXrabGX65n2uaeP-NflaEcaBYE0p1S7bBGKRESls&downloadName=image.png" width="45%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
+        <img src="./static/images/md/career1_3.png" width="45%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
+        <img src="./static/images/md/career1_4.png" width="45%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
     </div>
 </div>

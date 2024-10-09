@@ -69,6 +69,11 @@
     background-color: rgba(0, 0, 0, 0.8);
     transition: 0.2s background-color ease;
 }
+
+#project-detail a.website{
+    background-color: rgba(21, 69, 0, 0.8);
+    transition: 0.2s background-color ease;
+}
 #project-detail a.colab{
     background-color: rgba(255, 111, 0, 0.8);
     transition: 0.2s background-color ease;

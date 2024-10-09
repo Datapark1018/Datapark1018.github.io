@@ -28,7 +28,7 @@
         <br>
         <hr>
         <br>
-        <img src="https://file.notion.so/f/f/6f3166b5-9a0c-48a4-975e-b5abb652e5c8/012b639d-f959-4360-9202-d797d9cfc900/image.png?table=block&id=1179353f-aebf-8035-851e-c58de56ef22c&spaceId=6f3166b5-9a0c-48a4-975e-b5abb652e5c8&expirationTimestamp=1728295200000&signature=PK9Bs-9lH1FY80vNbf_j1xczRQNv0rkuY4YMd2W5p5A&downloadName=image.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
+        <img src="./static/images/md/career2_1.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
     </div>
 </div>
 
@@ -50,7 +50,7 @@
         <br>
         <hr>
         <br>
-        <img src="https://file.notion.so/f/f/6f3166b5-9a0c-48a4-975e-b5abb652e5c8/b81a1e7c-efb5-4e36-aea7-61c99c7055bf/image.png?table=block&id=1179353f-aebf-80b2-88a4-c2228bd5f332&spaceId=6f3166b5-9a0c-48a4-975e-b5abb652e5c8&expirationTimestamp=1728295200000&signature=_ee_tPy52cFoMuXAYF-MoNLnD0tD4TxzrJvFwhWrlcw&downloadName=image.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
+        <img src="./static/images/md/career2_3.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
     </div>
 </div>
 
@@ -72,6 +72,6 @@
         <br>
         <hr>
         <br>
-        <img src="https://file.notion.so/f/f/6f3166b5-9a0c-48a4-975e-b5abb652e5c8/bf7837a5-53d2-4ebb-94a0-ffa617fffc76/image.png?table=block&id=1179353f-aebf-8012-8986-f27d11864bb5&spaceId=6f3166b5-9a0c-48a4-975e-b5abb652e5c8&expirationTimestamp=1728295200000&signature=lE0Ccr7BmtzLuMaEXGDXqxRyXV6-lWThY9BvlEH33OM&downloadName=image.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
+        <img src="./static/images/md/career2_4.png" width="100%" style="box-shadow:0 0 3px 1px darkgray;border-radius:10px;" >
     </div>
 </div>
